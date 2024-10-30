@@ -1,9 +1,8 @@
 import styles from './List.module.scss';
 import Column from './../Column/Column';
 import ColumnForm from './../ColumnForm/ColumnForm';
-import { useState } from 'react';
-import {useSelector} from  'react-redux';
-import CardForm from '../CardForm/CardForm';
+import { useSelector } from 'react-redux';
+
 
 const List = () => {
 	const columns = useSelector(state => state.columns);
@@ -17,9 +16,7 @@ const List = () => {
 			<section className={styles.columns}>
 				{columns.map(column => <Column key={column.id} id={column.id} title={column.title} icon={column.icon} cards={column.cards} />)}
 			</section>
-			
 			<ColumnForm />
-
 		</div>
 	);
 };
