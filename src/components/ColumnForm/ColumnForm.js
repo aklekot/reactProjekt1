@@ -7,7 +7,7 @@ const ColumnForm = () => {
     const dispatch = useDispatch();
     const [title, setTitle] = useState('');
     const [icon, setIcon] = useState('');
-    
+
     const handleSubmit = (e) => {
         e.preventDefault();
         if (title.trim() && icon.trim()) {
